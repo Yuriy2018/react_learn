@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import HeaderBlock from "./components/header/HeaderBlock";
+import LayoutBlock from "./components/layout/LayoutBlock";
+import FooterBlock from "./components/footer/FooterBlock";
+
+import bg from '../src/assets/bg3.jpg'
+
+const App = () => {
+    const title = 'sdfsdf';
+    return (
+        <>
+            <HeaderBlock title={'MyTitle'} descr={'MyDescr'}/>
+            <LayoutBlock style={'backgroundImage: `url(${bg})`'} title={'MyTitle'} descr={'MyDescr'}/>
+            <LayoutBlock title='-- ЗДЕСЬ props.title --'/>
+            <LayoutBlock title='-- ЗДЕСЬ props.title --'/>
+            <FooterBlock/>
+        </>
+    );
 }
 
 export default App;
